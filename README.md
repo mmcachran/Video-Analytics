@@ -1,4 +1,5 @@
 === Video Analytics ===
+
 Contributors: mmcachran
 Tags: youtube, video, google analytics
 Requires at least: 3.8
