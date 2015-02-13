@@ -6,7 +6,7 @@ Requires at least: 3.8
 Tested up to: 4.1
 Stable tag: trunk
 
-Embed multiple videos and track usage via Google Analytics
+Embed multiple videos and track usage/playback via Google Analytics
 
 == Installation ==
 
