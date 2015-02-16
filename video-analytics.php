@@ -94,7 +94,7 @@ class Video_Analytics {
 		return $plugin_array;
 	}
 	
-	function add_shortcode( $params, $content = null ) {
+	public function add_shortcode( $params, $content = null ) {
 		if(
 			( isset( $params['video_id']) || isset($params['playlist_id']) ) 
 			&& isset( $params['type'] )
