@@ -71,7 +71,7 @@ var VideoAnalytics = (function( window, document, $, undefined ) {
     };
     
     app.onPlayerError = function(e) {
-        dataLayer.push({
+        console.log({
             event: "error",
             action: "GTM",
             label: "youtube:" + e["target"]["src"] + "-" + e["data"]
