@@ -23,8 +23,8 @@ var VideoAnalytics = (function( window, document, $, undefined ) {
 		window.onYouTubeIframeAPIReady = function () {
 			$('div[id^="yt-frame-"]').each(function(i, val) {
 			
-				// Initialize each YouTube video present
-				app.$videos[i] = new YT.Player( $(this).attr('id'), {
+				// Initialize each YouTube video on the page
+				app.$videos[i] = new YT.Player($(this).attr('id'), {
 					height: '449',
 					width: '768',
 					videoId: $(this).attr('data-key'),
@@ -44,7 +44,7 @@ var VideoAnalytics = (function( window, document, $, undefined ) {
 	};
 	
 	app.onPlayerReady = function(e) {
-		// Do something like report back to Google Tag Manager
+		// Do something like report back to GTM
 	};
 	
 	app.onPlayerStateChange = function(e) {
@@ -56,7 +56,10 @@ var VideoAnalytics = (function( window, document, $, undefined ) {
                 label: e.target["getVideoUrl"]().match(/v=([^&]+)/)[1]
             });
             
-            window._gaq.push(['_trackEvent', 'Youtube-' + e.target["getVideoUrl"]().match(/v=([^&]+)/)[1], 'play']); 
+            // track with GA
+            window._gaq.push(['_trackEvent', 'Youtube-' + e.target["getVideoUrl"]().match(/v=([^&]+)/)[1], 'play']);
+            
+            // set the last action
             YT.gtmLastAction = "";
         }
         if (e["data"] == YT.PlayerState.PAUSED) {
@@ -66,7 +69,10 @@ var VideoAnalytics = (function( window, document, $, undefined ) {
                 label: e.target["getVideoUrl"]().match(/v=([^&]+)/)[1]
             });
             
-            window._gaq.push(['_trackEvent', 'Youtube-' + e.target["getVideoUrl"]().match(/v=([^&]+)/)[1], 'pause']); 
+            //track with GA
+            window._gaq.push(['_trackEvent', 'Youtube-' + e.target["getVideoUrl"]().match(/v=([^&]+)/)[1], 'pause']);
+            
+            // set the last action
             YT.gtmLastAction = "p";
         }
     };
