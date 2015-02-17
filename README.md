@@ -15,3 +15,11 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 == Usage ==
 
 After activation, you will have a YouTube button in your TinyMCE toolbar to embed videos and these videos will use the JS API to track playback.
+
+== Changelog ==
+
+= 0.3.0 =
+* Initialize _gaq inside JS init
+
+= 0.2.0 =
+* cleanup

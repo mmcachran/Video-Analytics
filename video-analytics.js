@@ -7,7 +7,8 @@ var VideoAnalytics = (function( window, document, $, undefined ) {
 		app.addYoutubeScript();
 		app.onFrameReady();
 		
-		app._gaq = window._gaq || [];
+		// initialize _gaq
+		window._gaq = window._gaq || [];
 	};
 	
 	app.addYoutubeScript = function() {
@@ -55,7 +56,7 @@ var VideoAnalytics = (function( window, document, $, undefined ) {
                 label: e.target["getVideoUrl"]().match(/v=([^&]+)/)[1]
             });
             
-            app._gaq.push(['_trackEvent', 'Youtube-' + e.target["getVideoUrl"]().match(/v=([^&]+)/)[1], 'play']); 
+            window._gaq.push(['_trackEvent', 'Youtube-' + e.target["getVideoUrl"]().match(/v=([^&]+)/)[1], 'play']); 
             YT.gtmLastAction = "";
         }
         if (e["data"] == YT.PlayerState.PAUSED) {
@@ -65,7 +66,7 @@ var VideoAnalytics = (function( window, document, $, undefined ) {
                 label: e.target["getVideoUrl"]().match(/v=([^&]+)/)[1]
             });
             
-            app._gaq.push(['_trackEvent', 'Youtube-' + e.target["getVideoUrl"]().match(/v=([^&]+)/)[1], 'pause']); 
+            window._gaq.push(['_trackEvent', 'Youtube-' + e.target["getVideoUrl"]().match(/v=([^&]+)/)[1], 'pause']); 
             YT.gtmLastAction = "p";
         }
     };
@@ -91,7 +92,7 @@ var VideoAnalytics = (function( window, document, $, undefined ) {
                 });
                 
                 // track with GA
-				app._gaq.push(['_trackEvent', 'Youtube-' + e["getVideoUrl"]().match(/v=([^&]+)/)[1], t * 100 + "%"]); 
+				window._gaq.push(['_trackEvent', 'Youtube-' + e["getVideoUrl"]().match(/v=([^&]+)/)[1], t * 100 + "%"]); 
             }
             e["lastP"] != 1 && setTimeout(app.onPlayerPercent, 1000, e);
         }

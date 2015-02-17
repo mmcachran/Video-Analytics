@@ -2,10 +2,10 @@
 /**
  * Plugin Name: Video Analytics
  * Description: Embed multiple videos and track play using GA
- * Version:     0.2.0
+ * Version:     0.3.0
  * Author:      mmcachran
  * License:     GPLv2+
- * Text Domain: yt_embed
+ * Text Domain: video_analytics
  * Domain Path: /languages
  */
 
@@ -28,7 +28,7 @@
 if( ! class_exists( 'Video_Analytics' ) ):
 
 class Video_Analytics {
-	const VERSION = '0.2.0';
+	const VERSION = '0.3.0';
 	public static $url  = '';
 	public static $path = '';
 	public static $name = '';
