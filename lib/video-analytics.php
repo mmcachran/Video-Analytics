@@ -36,6 +36,7 @@ class Video_Analytics {
 
 		return self::$instance;
 	}
+
 	/**
 	 * Sets up our plugin
 	 * @since  0.1.0
@@ -97,7 +98,7 @@ class Video_Analytics {
 	
 	public function add_shortcode( $params, $content = null ) {
 		if(
-			( isset( $params['video_id']) || isset($params['playlist_id']) ) 
+			( isset( $params['video_id'] ) || isset( $params['playlist_id'] ) ) 
 			&& isset( $params['type'] )
 		) {
 			$html = '<div class="article-media"><div class="video-container">';
