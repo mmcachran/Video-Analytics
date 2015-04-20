@@ -18,6 +18,9 @@ After activation, you will have a YouTube button in your TinyMCE toolbar to embe
 
 == Changelog ==
 
+= 0.4.0 =
+* Code cleanup and restructuring
+
 = 0.3.0 =
 * Initialize _gaq inside JS init
 
