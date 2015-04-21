@@ -6,9 +6,9 @@
  *
  * Plugin Name: Video Analytics
  * Description: Embed multiple videos and track play using GA
- * Version:           1.0.5
+ * Version:           0.5.0
  * Author:            mmcachran
- * Text Domain:       previously-viewed-deals
+ * Text Domain:       video_analytics
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Domain Path:       /languages
@@ -19,7 +19,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'WP_VIDEO_ANALYTICS_VERSION', '0.4.0' );
+define( 'WP_VIDEO_ANALYTICS_VERSION', '0.5.0' );
 
 // Are we in DEV mode?
 if ( ! defined( 'WP_VIDEO_ANALYTICS' ) ) {

@@ -18,6 +18,9 @@ After activation, you will have a YouTube button in your TinyMCE toolbar to embe
 
 == Changelog ==
 
+= 0.5.0 =
+* Text domain fix
+
 = 0.4.0 =
 * Code cleanup and restructuring
 
